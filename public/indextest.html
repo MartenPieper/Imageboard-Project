@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Imageboard</title>
+    <link rel = "stylesheet"
+  type = "text/css"
+  href = "stylesheet.css" />
+</head>
+<body>
+
+    <div id="main">
+    <h3>{{ header }}</h3>
+    <h3>{{ lunch }}</h3>
+    <p>{{ 2 + 2  }}</p>
+
+    <!-- Looping through an array in data of script.js -->
+    <ul v-for = "item in pokemon">
+        <li>{{ item }}</li>
+    </ul>
+    <!--  The "in" specifies which array the variables should be taken from -->
+    <p v-for = "animal in cuteAnimals">{{ animal.name }}-{{ animal.cuteScore }}</p>
+
+    <img :src="imageSrc" alt="">
+    <!-- The colon ":" is used for any attribute within an html tag -->
+
+
+<!-- If/Else block in Vue.js-->
+    <p v-if = "integer === 1">I'm the special text you only see if integer is 1!</p>
+    <p v-else>Render this text instead!</p>
+    </div>
+
+    <p class="pokemon-p-tag" v-for = "pokemon in pokemonArray">{{ pokemon }}</p>
+
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <title>Imageboard</title>
+    <link rel = "stylesheet"
+  type = "text/css"
+  href = "stylesheet.css" />
+  <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="heading">
+<h1 class="mainheading"><img class="logo" src="Logo.png" alt=""></h1>
+<div id="container">
+	<div id="text"></div><div id="cursor"></div>
+</div>
+
+</div>
+<div id="main">
+
+
+<form @keydown.13="getMoreImages" class="imagesubmit">
+    <center><input class="inputimage" v-model ="form.title" placeholder="Title" type="text" name="title">
+    <input class="inputimage" v-model ="form.description" placeholder="Description" type="text" name="description">
+    <input class="inputimage" v-model ="form.username" placeholder="Username" type="text" name="username">
+    <input class="inputimage" @change ="handleFileChange" type="file" accept= "image/*">
+    <button class="inputimage btn-hover color-4"  id="imagebutton" @click = "uploadFile">Upload</button>
+    </center>
+</form>
+
+<div class="images" v-if ="images.length" v-for = "item in images" @click="resizeModal">
+<!-- We want to use "#13" if the user clicks on image number 13. If we would only use "13" in the url, we would make a request to our server. -->
+<a class="links" :href= "'#' + item.id" :title=item.title>
+<img class="image" :id="item.id" :src="item.url" :alt="item.title" :title=item.title>
+</a>
+<div class="componentCompleted" v-if="item.completedComponent">This Component is completed</div>
+<!-- <p class="title">{{item.title}}</p> -->
+</div>
+<div class="button">
+<button id="morebutton" class="btn-hover color-4" @click="getMoreImages" v-if ="showButton">More</button>
+</div>
+
+
+
+
+<some-component
+:image-id ="imageId"
+v-if="imageId" v-if ="showComponent" @close-the-component = "closingTheComponent"
+></some-component>
+
+
+
+
+
+
+<!-- :first-name="firstName" v-if="showComponent" -->
+<!-- "name" comes from "props" in the Vue component. The first name is referring to the name in props. The second name is referring to the data in the Vue instance. -->
+<!-- The colon ":" is needed in front of the "name" to reference a Vue component and not a string called "name" -->
+<!-- You cannot use camelCase in Vue components-> You have to use kebap-case (include minus "-"). The camleCase from Vue components will automatically be replaced by kebap-case -->
+</div>
+
+<!-- The Vue component script must be outside of main. Must have ""text/x-template" as type-->
+<script id="my-template" type="text/x-template">
+    <div class="component-container">
+        <div class="blurcontainer">
+        <div class="modal">
+            <h1 id="closecomponent" @click="closeComponent">X</h1>
+            <!-- <div class="blur"></div> -->
+            <center><img :src="url" alt="" class="modalimage"></center>
+            <h2 id="modalheading">{{ title }}</h2>
+            <p id="description">{{ description }}</p>
+            <div v-if ="completedComponent" @completed-the-component ="completingTheComponent">Completed!!</div>
+                <h3 @click = "updateModal">Donzo!</h3>
+
+        <!-- @click ="closeComponent" -->
+        <!-- <h1>{{ firstName }}</h1>
+        <h1>{{ heading }}</h1> -->
+        <p>Uploaded by {{ username }} on {{ created_at }}</p>
+        <h2>Share your thoughts!</h2>
+
+        <form>
+            <input v-model ="form.comment" placeholder="Comment" type="text" name="comment">
+            <input v-model ="form.usernametwo" placeholder="Username" type="text" name="username">
+            <button @click = "uploadComment">Submit</button>
+        </form>
+            <div class="comments">
+            <div  v-for = "com in comments">
+                <h3 v-if="com.comment">"{{com.comment}}"</h3>
+                <p v-if="com.comment">{{com.usernametwo}} on {{com.commenttime}}</p>
+            </div>
+</div>
+<!--
+        <h1 @click="handleClick">My component is running!</h1>
+        <p>I'm a p tag</p> -->
+        </div>
+        </div>
+    </div>
+</script>
+
+
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/effect.js"></script>
+
+</body>
+</html>

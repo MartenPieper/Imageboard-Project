@@ -1,0 +1,435 @@
+/* .images {
+    display: grid;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+} */
+
+/* .images:hover {
+    background: #fd7a5e;
+} */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #805915;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+.images a {
+    top: 300px;
+    background: white;
+    width: 200px;
+    color: red;
+    display: inline-block;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 10px 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+    z-index: 0;
+    position: relative;
+}
+.images a:after {
+    color: #333;
+
+    font-size: 20px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+    font-family: "Just Another Hand", cursive;
+    font-size: 3em;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.images a[title] {
+    title: attr(title color, red);
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* .images img {
+    display: block;
+    width: inherit;
+} */
+
+.images:nth-child(2n) {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg); */
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+.images:nth-child(3n) {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    transform: rotate(-24deg); */
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+}
+.images:nth-child(4n) {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* -webkit-transform: rotate(14deg);
+    -moz-transform: rotate(14deg);
+    transform: rotate(14deg); */
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
+.images:nth-child(5n) {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    /* -webkit-transform: rotate(-18deg);
+    -moz-transform: rotate(-18deg);
+    transform: rotate(-18deg); */
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.images a:hover {
+    /* width: 50%;
+    height: 500px; */
+    /* -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden; */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+
+    /* transform: translate(1.2);
+    -webkit-transform: translate(1.2);
+    -webkit-transform:translate3d(0,0,0);*/
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.images img {
+    border: 1px solid black;
+    height: 250px;
+    width: 200px;
+    display: block;
+    /* width: inherit; */
+
+    /* display: inline-block; */
+}
+
+.image {
+}
+
+.title {
+}
+
+.modal {
+    background: white;
+    color: black;
+    border-radius: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 15px 30px;
+    padding: 10px 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+    z-index: 10;
+
+    justify-content: center;
+    display: inline-block;
+    position: absolute;
+}
+
+.modal img {
+    border: 1px solid black;
+    height: 360px;
+    width: 300px;
+    display: block;
+    z-index: 11;
+    justify-content: center;
+    /* left: 50%;
+    /* transform: translateX(-50%); */
+}
+
+.blurcontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* width: 100%;
+    height: 100vh; */
+    /* background: rgb(128, 128, 128, 0.5); */
+    background-size: 100% 100%;
+    /* opacity: 0.5; */
+    z-index: 1;
+    margin: 0;
+}
+
+#modalheading {
+    font-family: "Just Another Hand", cursive;
+    font-size: 40px;
+}
+
+#description {
+    font-family: "Just Another Hand", cursive;
+    font-size: 30px;
+}
+
+#closecomponent {
+    margin-left: 200px;
+    display: block;
+    right: 5px;
+
+    font-size: 40px;
+}
+
+.heading {
+    position: relative;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    /* background-color: #488b49; */
+    background-image: linear-gradient(
+        to right,
+        #0ba360,
+        #3cba92,
+        #30dd8a,
+        #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.input {
+}
+
+.logo {
+    margin-top: 15px;
+    height: 60%;
+    width: 60%;
+}
+.modalimage {
+}
+
+.imagesubmit {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10%);
+
+    background-image: linear-gradient(
+        to right,
+        #0ba360,
+        #3cba92,
+        #30dd8a,
+        #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    align-content: center;
+}
+.inputimage {
+    display: block;
+    margin-top: 10px;
+}
+
+#imagebutton {
+    border: 2px yellow solid;
+}
+
+.subheading {
+    font-family: "Just Another Hand", cursive;
+    color: white;
+    font-size: 40px;
+}
+
+#morebutton {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px yellow solid;
+}
+
+.comments {
+    /* overflow: scroll; */
+}
+
+#container {
+    text-align: center;
+}
+
+#text {
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-family: "Just Another Hand", cursive;
+}
+
+#cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 50px;
+    background-color: white;
+    animation: blink 0.75s step-end infinite;
+    font-family: "Just Another Hand", cursive;
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+/* Button Design */
+
+/* * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+#morebutton {
+    /* margin: 10%; */
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(
+        to right,
+        #009245,
+        #fcee21,
+        #30dd8a,
+        #2bb673
+    );
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+/* Input fields */
+
+input[type="text"] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type="text"]:focus {
+    border-color: #333;
+}
+
+input[type="file"] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+input[type="file"]:focus {
+    border-color: #333;
+}
